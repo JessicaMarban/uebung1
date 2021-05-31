@@ -16,13 +16,13 @@ public class PasswordChecker {
     }
 
 
-    //checks for numbers and for upper and lower case letters
+    //checks for upper and lower case letters
     public boolean containsUpperLowerLetters(String password) {
         char c;
         boolean upperCase = false;
         boolean lowerCase = false;
 
-        //for loop to go through words and check for numbers/letters
+        //for loop to go through words and check for letters
         for (int i = 0; i < password.length(); i++) {
             c = password.charAt(i);
 

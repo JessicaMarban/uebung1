@@ -20,7 +20,7 @@ public class PasswordCheckerTest {
     @DisplayName("Check for lower and upper case")
     public void testUpperLowerCase() {
         PasswordChecker pw = new PasswordChecker();
-        assertTrue(pw.containsUpperLowerLetters("mfDvfvfvvff"));
+        assertTrue(pw.containsUpperLowerLetters("mfLKJvfvfvvff"));
     }
 
     @Test
