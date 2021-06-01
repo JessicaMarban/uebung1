@@ -14,6 +14,8 @@ public class PasswordCheckerTest {
     public void testPasswordLength() {
         PasswordChecker pw = new PasswordChecker();
         assertTrue(pw.checkPasswordLength("pw1268468534"));
+        assertFalse(pw.checkPasswordLength("kdn"));
+        assertTrue(pw.checkPasswordLength("fFJvruviernvivvn"));
     }
 
     @Test
@@ -21,6 +23,7 @@ public class PasswordCheckerTest {
     public void testUpperLowerCase() {
         PasswordChecker pw = new PasswordChecker();
         assertTrue(pw.containsUpperLowerLetters("mfLKJvfvfvvff"));
+        assertFalse(pw.containsUpperLowerLetters("furfuerign"));
     }
 
     @Test
@@ -28,6 +31,7 @@ public class PasswordCheckerTest {
     public void testNumbers() {
         PasswordChecker pw = new PasswordChecker();
         assertTrue(pw.containsNumbers("mf5dedededf"));
+        assertFalse(pw.containsNumbers("fnlNfirn"));
     }
 
     @Test
@@ -35,6 +39,7 @@ public class PasswordCheckerTest {
     public void testSpecialCharacters() {
         PasswordChecker pw = new PasswordChecker();
         assertTrue(pw.checkForSpecialCharacters("HiYa!"));
+        assertFalse(pw.checkForSpecialCharacters("Thisnfue"));
     }
 
     @Test
@@ -42,6 +47,8 @@ public class PasswordCheckerTest {
     public void testConsecutiveNumbers() {
         PasswordChecker pw = new PasswordChecker();
         assertTrue(pw.checkForConsecutiveNumbers("kdjnnn8910"));
+        assertFalse(pw.checkForConsecutiveNumbers("123Ksnf"));
+        assertFalse(pw.checkForConsecutiveNumbers("1234Ksnf"));
     }
 
     @Test
@@ -49,7 +56,6 @@ public class PasswordCheckerTest {
     public void testThreeInARow() {
         PasswordChecker pw = new PasswordChecker();
         assertTrue(pw.checkThreeInARow("jnfr11"));
+        assertFalse(pw.checkThreeInARow("jjdefnej222"));
     }
-
-
 }

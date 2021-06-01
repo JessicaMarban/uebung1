@@ -119,7 +119,7 @@ public class PasswordChecker {
                         numbersCounter = 0;
                     }
                 }
-                if (numbersCounter > 3) {
+                if (numbersCounter >= 3) {
                     return false;
                 }
             }
