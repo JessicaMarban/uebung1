@@ -13,25 +13,25 @@ public class PasswordCheckerTest {
     @DisplayName("Password length")
     public void testPasswordLength() {
         PasswordChecker pw = new PasswordChecker();
-        assertTrue(pw.checkPasswordLength("pw1268468534"));
-        assertFalse(pw.checkPasswordLength("kdn"));
-        assertTrue(pw.checkPasswordLength("fFJvruviernvivvn"));
+        assertTrue(pw.checkPasswordLength("ThisIsPerfect"));
+        assertFalse(pw.checkPasswordLength("OhNo"));
+        assertTrue(pw.checkPasswordLength("AnotherPerfectOne"));
     }
 
     @Test
     @DisplayName("Check for lower and upper case")
     public void testUpperLowerCase() {
         PasswordChecker pw = new PasswordChecker();
-        assertTrue(pw.containsUpperLowerLetters("mfLKJvfvfvvff"));
-        assertFalse(pw.containsUpperLowerLetters("furfuerign"));
+        assertTrue(pw.containsUpperLowerLetters("MoiraRoseForPresident"));
+        assertFalse(pw.containsUpperLowerLetters("noneforjohnny"));
     }
 
     @Test
     @DisplayName("Check for numbers")
     public void testNumbers() {
         PasswordChecker pw = new PasswordChecker();
-        assertTrue(pw.containsNumbers("mf5dedededf"));
-        assertFalse(pw.containsNumbers("fnlNfirn"));
+        assertTrue(pw.containsNumbers("KamalaHarris2024"));
+        assertFalse(pw.containsNumbers("NoMoreTrump"));
     }
 
     @Test
@@ -39,23 +39,23 @@ public class PasswordCheckerTest {
     public void testSpecialCharacters() {
         PasswordChecker pw = new PasswordChecker();
         assertTrue(pw.checkForSpecialCharacters("HiYa!"));
-        assertFalse(pw.checkForSpecialCharacters("Thisnfue"));
+        assertFalse(pw.checkForSpecialCharacters("NothingSpecialHere"));
     }
 
     @Test
     @DisplayName("Check for two consecutive numbers")
     public void testConsecutiveNumbers() {
         PasswordChecker pw = new PasswordChecker();
-        assertTrue(pw.checkForConsecutiveNumbers("kdjnnn8910"));
-        assertFalse(pw.checkForConsecutiveNumbers("123Ksnf"));
-        assertFalse(pw.checkForConsecutiveNumbers("1234Ksnf"));
+        assertTrue(pw.checkForConsecutiveNumbers("NoTenConsecutives8910"));
+        assertFalse(pw.checkForConsecutiveNumbers("EwDavid123"));
+        assertFalse(pw.checkForConsecutiveNumbers("RIPRuth1234"));
     }
 
     @Test
     @DisplayName("Check for numbers in a row")
     public void testThreeInARow() {
         PasswordChecker pw = new PasswordChecker();
-        assertTrue(pw.checkThreeInARow("jnfr11"));
-        assertFalse(pw.checkThreeInARow("jjdefnej222"));
+        assertTrue(pw.checkThreeInARow("RowRowRowYourBoat"));
+        assertFalse(pw.checkThreeInARow("Luficer666"));
     }
 }
